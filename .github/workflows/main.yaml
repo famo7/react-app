@@ -27,3 +27,6 @@ jobs:
         context: .
         push: true
         tags: ${{ secrets.DOCKER_USERNAME }}/exercise-1.14:latest
+
+    - name: Deploy to Render
+      run: curl ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
